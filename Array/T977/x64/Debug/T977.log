@@ -1,0 +1,4 @@
+﻿  SortedSquares.cpp
+C:\Gary\CodeCapriccio-main\VSPorj\Array\T977\SortedSquares.cpp(9,31): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Gary\CodeCapriccio-main\VSPorj\Array\T977\SortedSquares.cpp(11,40): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  T977.vcxproj -> C:\Gary\CodeCapriccio-main\VSPorj\Array\x64\Debug\T977.exe

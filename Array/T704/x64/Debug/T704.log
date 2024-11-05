@@ -1,0 +1,5 @@
+﻿  BinarySearch.cpp
+C:\Gary\CodeCapriccio-main\VSPorj\Array\T704\BinarySearch.cpp(8,25): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Gary\CodeCapriccio-main\VSPorj\Array\T704\BinarySearch.cpp(29,25): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Gary\CodeCapriccio-main\VSPorj\Array\T704\BinarySearch.cpp(51,26): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  T704.vcxproj -> C:\Gary\CodeCapriccio-main\VSPorj\Array\x64\Debug\T704.exe
