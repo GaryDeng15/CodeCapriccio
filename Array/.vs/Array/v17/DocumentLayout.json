@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\",
+  "WorkspaceRootPath": "C:\\Gary\\CodeCapriccio\\Array\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{140B1E0B-A738-486D-A905-DB3F173E97AB}|T59\\T59.vcxproj|C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T59\\GenerateMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{140B1E0B-A738-486D-A905-DB3F173E97AB}|T59\\T59.vcxproj|solutionrelative:T59\\GenerateMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91C7D803-9B2D-466A-89C1-C6B3699FBD3B}|T209\\T209.vcxproj|C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T209\\MinSubArrayLen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{91C7D803-9B2D-466A-89C1-C6B3699FBD3B}|T209\\T209.vcxproj|C:\\Gary\\CodeCapriccio\\Array\\T209\\MinSubArrayLen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{91C7D803-9B2D-466A-89C1-C6B3699FBD3B}|T209\\T209.vcxproj|solutionrelative:T209\\MinSubArrayLen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35CFC751-42A7-4E4E-8625-2E8D271CABDC}|T977\\T977.vcxproj|C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T977\\SortedSquares.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{140B1E0B-A738-486D-A905-DB3F173E97AB}|T59\\T59.vcxproj|C:\\Gary\\CodeCapriccio\\Array\\T59\\GenerateMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{140B1E0B-A738-486D-A905-DB3F173E97AB}|T59\\T59.vcxproj|solutionrelative:T59\\GenerateMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35CFC751-42A7-4E4E-8625-2E8D271CABDC}|T977\\T977.vcxproj|C:\\Gary\\CodeCapriccio\\Array\\T977\\SortedSquares.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{35CFC751-42A7-4E4E-8625-2E8D271CABDC}|T977\\T977.vcxproj|solutionrelative:T977\\SortedSquares.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C26EB75-3371-4470-9064-D3DC146BA195}|T704\\T704.vcxproj|C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T704\\BinarySearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{0C26EB75-3371-4470-9064-D3DC146BA195}|T704\\T704.vcxproj|C:\\Gary\\CodeCapriccio\\Array\\T704\\BinarySearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0C26EB75-3371-4470-9064-D3DC146BA195}|T704\\T704.vcxproj|solutionrelative:T704\\BinarySearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -29,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -40,45 +40,45 @@
               "DocumentIndex": 4,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.36.32532\\include\\vector",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.36.32532\\include\\vector",
+              "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.36.32532\\include\\vector",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.36.32532\\include\\vector",
-              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.36.32532\\include\\vector",
+              "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.36.32532\\include\\vector",
               "ViewState": "AQIAAFoHAAAAAAAAAAAAAFoHAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-11-05T04:27:36.123Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GenerateMatrix.cpp",
-              "DocumentMoniker": "C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T59\\GenerateMatrix.cpp",
+              "DocumentMoniker": "C:\\Gary\\CodeCapriccio\\Array\\T59\\GenerateMatrix.cpp",
               "RelativeDocumentMoniker": "T59\\GenerateMatrix.cpp",
-              "ToolTip": "C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T59\\GenerateMatrix.cpp",
+              "ToolTip": "C:\\Gary\\CodeCapriccio\\Array\\T59\\GenerateMatrix.cpp",
               "RelativeToolTip": "T59\\GenerateMatrix.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADsAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-05T02:53:06.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T02:53:06.424Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MinSubArrayLen.cpp",
-              "DocumentMoniker": "C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T209\\MinSubArrayLen.cpp",
+              "DocumentMoniker": "C:\\Gary\\CodeCapriccio\\Array\\T209\\MinSubArrayLen.cpp",
               "RelativeDocumentMoniker": "T209\\MinSubArrayLen.cpp",
-              "ToolTip": "C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T209\\MinSubArrayLen.cpp",
+              "ToolTip": "C:\\Gary\\CodeCapriccio\\Array\\T209\\MinSubArrayLen.cpp",
               "RelativeToolTip": "T209\\MinSubArrayLen.cpp",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAADYAAAABAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-04T05:47:37.988Z"
+              "WhenOpened": "2024-11-04T05:47:37.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "BinarySearch.cpp",
-              "DocumentMoniker": "C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T704\\BinarySearch.cpp",
+              "DocumentMoniker": "C:\\Gary\\CodeCapriccio\\Array\\T704\\BinarySearch.cpp",
               "RelativeDocumentMoniker": "T704\\BinarySearch.cpp",
-              "ToolTip": "C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T704\\BinarySearch.cpp",
+              "ToolTip": "C:\\Gary\\CodeCapriccio\\Array\\T704\\BinarySearch.cpp",
               "RelativeToolTip": "T704\\BinarySearch.cpp",
               "ViewState": "AQIAAE4AAAAAAAAAAAAQwGQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -88,9 +88,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "SortedSquares.cpp",
-              "DocumentMoniker": "C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T977\\SortedSquares.cpp",
+              "DocumentMoniker": "C:\\Gary\\CodeCapriccio\\Array\\T977\\SortedSquares.cpp",
               "RelativeDocumentMoniker": "T977\\SortedSquares.cpp",
-              "ToolTip": "C:\\Gary\\CodeCapriccio-main\\VSPorj\\Array\\T977\\SortedSquares.cpp",
+              "ToolTip": "C:\\Gary\\CodeCapriccio\\Array\\T977\\SortedSquares.cpp",
               "RelativeToolTip": "T977\\SortedSquares.cpp",
               "ViewState": "AQIAACIAAAAAAAAAAAAQwDgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",

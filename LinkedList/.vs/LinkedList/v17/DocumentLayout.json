@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Gary\\CodeCapriccio\\LinkedList\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AEFD0D62-7058-450B-B862-9E60A1533458}|T203\\T203.vcxproj|C:\\Gary\\CodeCapriccio\\LinkedList\\T203\\RemoveElements.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AEFD0D62-7058-450B-B862-9E60A1533458}|T203\\T203.vcxproj|solutionrelative:T203\\RemoveElements.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RemoveElements.cpp",
+              "DocumentMoniker": "C:\\Gary\\CodeCapriccio\\LinkedList\\T203\\RemoveElements.cpp",
+              "RelativeDocumentMoniker": "T203\\RemoveElements.cpp",
+              "ToolTip": "C:\\Gary\\CodeCapriccio\\LinkedList\\T203\\RemoveElements.cpp",
+              "RelativeToolTip": "T203\\RemoveElements.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-06T03:20:56.197Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
