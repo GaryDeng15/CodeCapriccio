@@ -1,0 +1,2 @@
+﻿  RemoveElements.cpp
+E:\Algorithm\CodeCapriccio\LinkedList\T203\RemoveElements.cpp(55): error C4700: uninitialized local variable 'head' used
