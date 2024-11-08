@@ -47,19 +47,19 @@ int main() {
     */
     vector<int> input = { 1,2,6,3,4,5,6 };
     int val = 6; 
-    ListNode* head;
+    //ListNode* head;
     for (int i = 0; i < input.size(); i++)
     {
         
     }
-    ListNode* result = removeElements(head, val);
+    //ListNode* result = removeElements(head, val);
 
-    while (result != NULL && result->next !=NULL)
+    /*while (result != NULL && result->next !=NULL)
     {
         cout << result->val << ", ";
         result = result->next;
     }
-    cout << endl;
+    cout << endl;*/
 
     system("pause");
     return 0;
