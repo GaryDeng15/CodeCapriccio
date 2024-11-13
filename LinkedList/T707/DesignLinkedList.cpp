@@ -11,99 +11,82 @@ using namespace std;
 
 class MyLinkedList {
 
-    struct ListNode {
+    struct LinkedNode{
         int val;
-        ListNode* next;
-        ListNode(int x) : val(x), next(nullptr) {}
+        LinkedNode* next;
+        LinkedNode(int val) : val(val), next(nullptr) {}
     };
-
 private:
-    ListNode* _dummyHead;
+    LinkedNode* _dumyHead;
     int _size;
 
 public:
     MyLinkedList() {
-        _dummyHead = new ListNode(0);
+        _dumyHead = new LinkedNode(0);
         _size = 0;
     }
 
     int get(int index) {
-        if (_size <= 0 || index > _size - 1 || index < 0)
-        {
+        if (index > (_size - 1) || index < 0) {
             return -1;
         }
-        ListNode* current = new ListNode(0);
-        current->next = _dummyHead;
-        while (index-- >= 0) {
+        LinkedNode* current = _dumyHead->next;
+        while (index--) {
             current = current->next;
         }
         return current->val;
     }
 
     void addAtHead(int val) {
-        ListNode* current = new ListNode(val);
-        current->next = _dummyHead;
-        _dummyHead = current;
+        LinkedNode* newNode = new LinkedNode(val);
+        newNode->next = _dumyHead->next;
+        _dumyHead->next = newNode;
         _size++;
     }
 
     void addAtTail(int val) {
-        ListNode* current = new ListNode(0);
-        current->next = _dummyHead;
-        int count = _size;
-        while (count-- >= 0) {
+        LinkedNode* newNode = new LinkedNode(val);
+        LinkedNode* current = _dumyHead;
+        while (current->next != nullptr) {
             current = current->next;
         }
-        ListNode* newNode = new ListNode(val);
         current->next = newNode;
         _size++;
     }
 
     void addAtIndex(int index, int val) {
-        if (index < 0 || index > _size - 1)
-        {
+        if (index > _size || index < 0) {
             return;
         }
-        ListNode* current = new ListNode(0);
-        ListNode* before = new ListNode(0);
-        current->next = _dummyHead;
-        before->next = current;
-        while (index-- >= 0) {
-            before = before->next;
+        LinkedNode* current = _dumyHead;
+        while (index--) {
             current = current->next;
         }
-        ListNode* addNode = new ListNode(val);
-        before->next = addNode;
-        addNode->next = current;
+        LinkedNode* newNode = new LinkedNode(val);
+        newNode->next = current->next;
+        current->next = newNode;
         _size++;
     }
 
     void deleteAtIndex(int index) {
-        if (index < 0 || index > _size - 1)
-        {
+        if (index >= _size || index < 0) {
             return;
         }
-        ListNode* current = new ListNode(0);
-        ListNode* before = new ListNode(0);
-        current->next = _dummyHead;
-        before->next = current;
-        while (index-- >= 0) {
-            before = before->next;
+        LinkedNode* current = _dumyHead;
+        while (index--) {
             current = current->next;
         }
-        before->next = current->next;
-        delete current;
+        LinkedNode* nodeToDel = current->next;
+        current->next = current->next->next;
+        delete nodeToDel;
         _size--;
     }
 
     void nodeIter() {
-        ListNode* current = new ListNode(0);
-        current->next = _dummyHead;
-        int count = _size;
-        while (count-- >= 0) {
+        LinkedNode* current = _dumyHead;
+        while (current->next != nullptr) {
+            cout << current->val << " ";
             current = current->next;
-            cout << current->val << ", ";
-            //current = current->next;
         }
         cout << endl;
     }
@@ -128,7 +111,7 @@ int main(){
     }
     obj->nodeIter();
 
-    int getindex = 3, addHeadVal = -1, addTailVal = 100, addIndex = 5, addValAtIndex = 66, delIndex = 5;
+    int getindex = 0, addHeadVal = 33, addTailVal = -1, addIndex = 7, addValAtIndex = 77, delIndex = 0;
     cout << "The val of "<< getindex <<" is " << obj->get(getindex)<< endl;
 
     obj->addAtHead(addHeadVal);
