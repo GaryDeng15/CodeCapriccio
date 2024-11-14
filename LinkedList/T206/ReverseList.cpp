@@ -9,19 +9,16 @@ struct ListNode {
 };
 
 ListNode* reverseList(ListNode* head) {
-	if (head != nullptr && head->next != nullptr) {
-		ListNode* pre = nullptr;
-		ListNode* cur = head;
-		while (cur) {
-			ListNode* temp = new ListNode();
-			temp = cur->next;
-			cur->next = pre;
-			pre = cur;
-			cur = temp;
-		}
-		head = pre;
+	ListNode* temp;
+	ListNode* pre = nullptr;
+	ListNode* cur = head;
+	while (cur) {
+		temp = cur->next;
+		cur->next = pre;
+		pre = cur;
+		cur = temp;
 	}
-	return head;
+	return pre;
 }
 
 int main() {
