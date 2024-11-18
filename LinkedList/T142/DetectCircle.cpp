@@ -9,12 +9,22 @@ struct ListNode {
 ListNode* detectCycle(ListNode* head) {
 	ListNode* slow = head;
 	ListNode* fast = head;
-	bool cycleFlag = false;
-	int entryIndex = -1;
-	while (fast->next != nullptr)
+	while (fast != nullptr && fast->next != nullptr)
 	{
-
+		fast = fast->next->next;
+		slow = slow->next;
+		if (fast == slow) {
+			ListNode* index1 = fast;
+			ListNode* index2 = head;
+			while (index1 != index2)
+			{
+				index1 = index1->next;
+				index2 = index2->next;
+			}
+			return index1;
+		}
 	}
+	return nullptr;
 }
 
 int main() {
