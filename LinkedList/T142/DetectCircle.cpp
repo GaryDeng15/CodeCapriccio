@@ -13,17 +13,21 @@ ListNode* detectCycle(ListNode* head) {
 	{
 		fast = fast->next->next;
 		slow = slow->next;
+		// 快慢指针相遇
 		if (fast == slow) {
 			ListNode* index1 = fast;
 			ListNode* index2 = head;
+			// 相遇点到环入口距离 = 链表头到环入口距离
 			while (index1 != index2)
 			{
 				index1 = index1->next;
 				index2 = index2->next;
 			}
+			// 返回入口节点
 			return index1;
 		}
 	}
+	// 未找到环返回空
 	return nullptr;
 }
 
