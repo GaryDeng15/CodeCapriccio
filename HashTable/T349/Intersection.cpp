@@ -15,6 +15,19 @@ vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
 	return vector<int>(result_set.begin(), result_set.end());
 }
 
+vector<int> intersectionByArray(vector<int>& nums1, vector<int>& nums2) {
+	unordered_set<int> result_set;
+	// 由于题目限制了元素不会大于1000，所以用数组也是可以的，但最好用set。
+	int hash[1001] = { 0 };
+	for (int num : nums1) {
+		hash[num] = 1;
+	}
+	for (int num : nums2) {
+		if (hash[num] == 1) result_set.insert(num);
+	}
+	return vector<int>(result_set.begin(), result_set.end());
+}
+
 int main() {
 	/**
 	* 349. 两个数组的交集
