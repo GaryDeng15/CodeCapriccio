@@ -5,20 +5,14 @@
 using namespace std;
 
 string reverseStr(string s, int k) {
-	for (int i = 0; i < s.size(); i += (2 * k)) {
+	for (int i = 0; i < s.size(); i += 2 * k) {
 		if (i + k <= s.size()) {
-			rev(s, i, i + k - 1);
+			reverse(s.begin() + i, s.begin() + i + k);
 			continue;
 		}
-		rev(s, i, s.size() - 1);
+		reverse(s.begin() + i, s.begin() + s.size());
 	}
 	return s;
-}
-
-void rev(string& str, int start, int end) {
-	for (int i = start, j = end; i < j; i++, j--) {
-		swap(str[i], str[j]);
-	}
 }
 
 int main() {
