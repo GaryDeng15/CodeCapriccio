@@ -4,23 +4,12 @@
 using namespace std;
 
 string removeDuplicates(string s) {
-    stack<int> iteredElem;
-    for (int i = 0; i < s.size(); i++) {
-        if (iteredElem.empty() || s[i] != iteredElem.top()) {
-            iteredElem.push(s[i]);
-        }
-        else {
-            iteredElem.pop();
-        }
-
+    string result;
+    for (char current : s) {
+        if (result.empty() || current != result.back()) result.push_back(current);
+        else result.pop_back();
     }
-    string newString;
-    newString.resize(iteredElem.size());
-    for (int i = newString.size() - 1; i >= 0; i--) {
-        newString[i] = iteredElem.top();
-        iteredElem.pop();
-    }
-    return newString;
+    return result;
 }
 
 int main() {
