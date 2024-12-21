@@ -18,5 +18,8 @@
     <ClCompile Include="RepeatedSubstringPattern.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RepetedSubStrPattern_Other.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
