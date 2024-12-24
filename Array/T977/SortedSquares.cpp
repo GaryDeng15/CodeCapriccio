@@ -20,6 +20,18 @@ vector<int> sortedSquares(vector<int>& nums) {
     return result;
 }
 
+// 暴力解法
+/**
+* 
+vector<int> sortedSquares(vector<int>& A) {
+        for (int i = 0; i < A.size(); i++) {
+            A[i] *= A[i];
+        }
+        sort(A.begin(), A.end()); // 快速排序
+        return A;
+}
+*/
+
 int main() {
 
     /**
