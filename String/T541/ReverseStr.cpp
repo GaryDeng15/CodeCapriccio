@@ -15,6 +15,21 @@ string reverseStr(string s, int k) {
 	return s;
 }
 
+// 另一种思路
+/**
+* string reverseStr(string s, int k) {
+        int n = s.size(),pos = 0;
+        while(pos < n){
+            //剩余字符串大于等于k的情况
+            if(pos + k < n) reverse(s.begin() + pos, s.begin() + pos + k);
+            //剩余字符串不足k的情况 
+            else reverse(s.begin() + pos,s.end());
+            pos += 2 * k;
+        }
+        return s;
+    }
+*/
+
 int main() {
 
 	/**
