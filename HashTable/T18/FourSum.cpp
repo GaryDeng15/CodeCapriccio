@@ -18,7 +18,8 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
         }
         for (int i = k + 1; i < nums.size(); i++) {
             // 2¼¶¼ôÖ¦´¦Àí
-            if (nums[k] + nums[i] > target && nums[k] + nums[i] >= 0) {
+            // nums[k] + nums[i] > target && nums[k] + nums[i] >= 0
+            if (nums[k] + nums[i] > target && nums[i] >= 0) {
                 break;
             }
 
