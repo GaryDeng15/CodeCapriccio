@@ -10,22 +10,22 @@ vector<vector<int>> generateMatrix(int n) {
     int offset = 1;
     int loop = n / 2;
     int mid = n / 2;
-    int i, j;
+    int x, y;
     int count = 1;
     while (loop --) {
-        i = startx;
-        j = starty;
-        for (j; j < n - offset; j++) {
-            result[i][j] = count++;
+        x = startx;
+        y = starty;
+        for (y; y < n - offset; y++) {
+            result[x][y] = count++;
         }
-        for (i; i < n - offset; i++) {
-            result[i][j] = count++;
+        for (x; x < n - offset; x++) {
+            result[x][y] = count++;
         }
-        for (j; j > starty; j--) {
-            result[i][j] = count++;
+        for (y; y > starty; y--) {
+            result[x][y] = count++;
         }
-        for (i; i > startx; i--) {
-            result[i][j] = count++;
+        for (x; x > startx; x--) {
+            result[x][y] = count++;
         }
         startx++;
         starty++;
@@ -59,7 +59,7 @@ int main() {
     *
     */
 
-    vector<vector<int>> result = generateMatrix(5);
+    vector<vector<int>> result = generateMatrix(1);
     system("pause");
     return 0;
 }
