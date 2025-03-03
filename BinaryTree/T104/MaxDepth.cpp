@@ -15,15 +15,35 @@ struct TreeNode {
 
 class Solution {
 public:
+    // é€’å½’æ³•
     int getdepth(TreeNode* node) {
         if (node == NULL) return 0;
-        int leftdepth = getdepth(node->left);       // ×ó
-        int rightdepth = getdepth(node->right);     // ÓÒ
-        int depth = 1 + max(leftdepth, rightdepth); // ÖÐ
+        int leftdepth = getdepth(node->left);       // ï¿½ï¿½
+        int rightdepth = getdepth(node->right);     // ï¿½ï¿½
+        int depth = 1 + max(leftdepth, rightdepth); // ï¿½ï¿½
         return depth;
     }
     int maxDepth(TreeNode* root) {
         return getdepth(root);
+    }
+
+    // è¿­ä»£æ³•
+    int maxDepth(TreeNode* root) {
+        if (root == NULL) return 0;
+        int depth = 0;
+        queue<TreeNode*> que;
+        que.push(root);
+        while(!que.empty()) {
+            int size = que.size();
+            depth++; // è®°å½•æ·±åº¦
+            for (int i = 0; i < size; i++) {
+                TreeNode* node = que.front();
+                que.pop();
+                if (node->left) que.push(node->left);
+                if (node->right) que.push(node->right);
+            }
+        }
+        return depth;
     }
 };
 
