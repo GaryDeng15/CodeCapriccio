@@ -1,2 +1,2 @@
 # CodeCapriccio
- LeetCode solution
+ Algorithm basis problem set.
