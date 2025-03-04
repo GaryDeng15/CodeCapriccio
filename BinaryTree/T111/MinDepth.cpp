@@ -15,16 +15,17 @@ struct TreeNode {
 
 class Solution {
 public:
+    // é€’å½’æ³•
     int getDepth(TreeNode* node) {
         if (node == NULL) return 0;
-        int leftDepth = getDepth(node->left);           // ×ó
-        int rightDepth = getDepth(node->right);         // ÓÒ
-                                                        // ÖÐ
-        // µ±Ò»¸ö×ó×ÓÊ÷Îª¿Õ£¬ÓÒ²»Îª¿Õ£¬ÕâÊ±²¢²»ÊÇ×îµÍµã
+        int leftDepth = getDepth(node->left);           // ï¿½ï¿½
+        int rightDepth = getDepth(node->right);         // ï¿½ï¿½
+                                                        // ï¿½ï¿½
+        // ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½ï¿½Ò²ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½
         if (node->left == NULL && node->right != NULL) {
             return 1 + rightDepth;
         }
-        // µ±Ò»¸öÓÒ×ÓÊ÷Îª¿Õ£¬×ó²»Îª¿Õ£¬ÕâÊ±²¢²»ÊÇ×îµÍµã
+        // ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½
         if (node->left != NULL && node->right == NULL) {
             return 1 + leftDepth;
         }
@@ -34,6 +35,28 @@ public:
 
     int minDepth(TreeNode* root) {
         return getDepth(root);
+    }
+
+    // è¿­ä»£æ³•
+    int minDepth(TreeNode* root) {
+        if (root == NULL) return 0;
+        int depth = 0;
+        queue<TreeNode*> que;
+        que.push(root);
+        while(!que.empty()) {
+            int size = que.size();
+            depth++; 
+            for (int i = 0; i < size; i++) {
+                TreeNode* node = que.front();
+                que.pop();
+                if (node->left) que.push(node->left);
+                if (node->right) que.push(node->right);
+                if (!node->left && !node->right) { 
+                    return depth;
+                }
+            }
+        }
+        return depth;
     }
 };
 
