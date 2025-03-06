@@ -15,6 +15,7 @@ struct TreeNode {
 
 class Solution {
 public:
+    // 递归法
     int getHeight(TreeNode* node) {
         if (node == NULL) {
             return 0;
@@ -27,6 +28,51 @@ public:
     }
     bool isBalanced(TreeNode* root) {
         return getHeight(root) == -1 ? false : true;
+    }
+
+    // 迭代法
+    private:
+    int getDepth(TreeNode* cur) {
+        stack<TreeNode*> st;
+        if (cur != NULL) st.push(cur);
+        int depth = 0; // 记录深度
+        int result = 0;
+        while (!st.empty()) {
+            TreeNode* node = st.top();
+            if (node != NULL) {
+                st.pop();
+                st.push(node);                          // 中
+                st.push(NULL);
+                depth++;
+                if (node->right) st.push(node->right);  // 右
+                if (node->left) st.push(node->left);    // 左
+
+            } else {
+                st.pop();
+                node = st.top();
+                st.pop();
+                depth--;
+            }
+            result = result > depth ? result : depth;
+        }
+        return result;
+    }
+
+public:
+    bool isBalanced(TreeNode* root) {
+        stack<TreeNode*> st;
+        if (root == NULL) return true;
+        st.push(root);
+        while (!st.empty()) {
+            TreeNode* node = st.top();                       // 中
+            st.pop();
+            if (abs(getDepth(node->left) - getDepth(node->right)) > 1) {
+                return false;
+            }
+            if (node->right) st.push(node->right);           // 右（空节点不入栈）
+            if (node->left) st.push(node->left);             // 左（空节点不入栈）
+        }
+        return true;
     }
 };
 
