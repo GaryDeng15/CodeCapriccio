@@ -16,18 +16,37 @@ struct TreeNode {
 
 class Solution {
 public:
+    // é€’å½’æ³•
     int sumOfLeftLeaves(TreeNode* root) {
         if (root == NULL) return 0;
         if (root->left == NULL && root->right == NULL) return 0;
 
-        int leftValue = sumOfLeftLeaves(root->left);    // ×ó
+        int leftValue = sumOfLeftLeaves(root->left);    // ï¿½ï¿½
         if (root->left && !root->left->left && !root->left->right) { 
             leftValue = root->left->val;
         }
-        int rightValue = sumOfLeftLeaves(root->right);  // ÓÒ
+        int rightValue = sumOfLeftLeaves(root->right);  // ï¿½ï¿½
 
-        int sum = leftValue + rightValue;               // ÖÐ
+        int sum = leftValue + rightValue;               // ï¿½ï¿½
         return sum;
+    }
+
+    // è¿­ä»£æ³•
+    int sumOfLeftLeaves(TreeNode* root) {
+        stack<TreeNode*> st;
+        if (root == NULL) return 0;
+        st.push(root);
+        int result = 0;
+        while (!st.empty()) {
+            TreeNode* node = st.top();
+            st.pop();
+            if (node->left != NULL && node->left->left == NULL && node->left->right == NULL) {
+                result += node->left->val;
+            }
+            if (node->right) st.push(node->right);
+            if (node->left) st.push(node->left);
+        }
+        return result;
     }
 };
 
