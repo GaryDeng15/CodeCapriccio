@@ -14,6 +14,7 @@ struct TreeNode {
 };
 
 class Solution {
+// 递归法
 private:
     TreeNode* parent;
     void traversal(TreeNode* cur, int val) {
@@ -36,6 +37,25 @@ public:
             root = new TreeNode(val);
         }
         traversal(root, val);
+        return root;
+    }
+
+// 迭代法
+    TreeNode* insertIntoBST(TreeNode* root, int val) {
+        if (root == NULL) {
+            TreeNode* node = new TreeNode(val);
+            return node;
+        }
+        TreeNode* cur = root;
+        TreeNode* parent = root; // 记录上一个节点
+        while (cur != NULL) {
+            parent = cur;
+            if (cur->val > val) cur = cur->left;
+            else cur = cur->right;
+        }
+        TreeNode* node = new TreeNode(val);
+        if (val < parent->val) parent->left = node;
+        else parent->right = node;
         return root;
     }
 };
