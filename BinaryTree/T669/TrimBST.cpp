@@ -15,18 +15,48 @@ struct TreeNode {
 
 class Solution {
 public:
+    // é€’å½’æ³•
     TreeNode* trimBST(TreeNode* root, int low, int high) {
         if (root == nullptr) return nullptr;
         if (root->val < low) {
-            TreeNode* right = trimBST(root->right, low, high); // Ñ°ÕÒ·ûºÏÇø¼ä[low, high]µÄ½Úµã
+            TreeNode* right = trimBST(root->right, low, high); // Ñ°ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[low, high]ï¿½Ä½Úµï¿½
             return right;
         }
         if (root->val > high) {
-            TreeNode* left = trimBST(root->left, low, high); // Ñ°ÕÒ·ûºÏÇø¼ä[low, high]µÄ½Úµã
+            TreeNode* left = trimBST(root->left, low, high); // Ñ°ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[low, high]ï¿½Ä½Úµï¿½
             return left;
         }
-        root->left = trimBST(root->left, low, high); // root->left½ÓÈë·ûºÏÌõ¼þµÄ×óº¢×Ó
-        root->right = trimBST(root->right, low, high); // root->right½ÓÈë·ûºÏÌõ¼þµÄÓÒº¢×Ó
+        root->left = trimBST(root->left, low, high); // root->leftï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        root->right = trimBST(root->right, low, high); // root->rightï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½
+        return root;
+    }
+
+    // è¿­ä»£æ³•
+    TreeNode* trimBST(TreeNode* root, int L, int R) {
+        if (!root) return nullptr;
+
+        // å¤„ç†å¤´ç»“ç‚¹ï¼Œè®©rootç§»åŠ¨åˆ°[L, R] èŒƒå›´å†…ï¼Œæ³¨æ„æ˜¯å·¦é—­å³é—­
+        while (root != nullptr && (root->val < L || root->val > R)) {
+            if (root->val < L) root = root->right; // å°äºŽLå¾€å³èµ°
+            else root = root->left; // å¤§äºŽRå¾€å·¦èµ°
+        }
+        TreeNode *cur = root;
+        // æ­¤æ—¶rootå·²ç»åœ¨[L, R] èŒƒå›´å†…ï¼Œå¤„ç†å·¦å­©å­å…ƒç´ å°äºŽLçš„æƒ…å†µ
+        while (cur != nullptr) {
+            while (cur->left && cur->left->val < L) {
+                cur->left = cur->left->right;
+            }
+            cur = cur->left;
+        }
+        cur = root;
+
+        // æ­¤æ—¶rootå·²ç»åœ¨[L, R] èŒƒå›´å†…ï¼Œå¤„ç†å³å­©å­å¤§äºŽRçš„æƒ…å†µ
+        while (cur != nullptr) {
+            while (cur->right && cur->right->val > R) {
+                cur->right = cur->right->left;
+            }
+            cur = cur->right;
+        }
         return root;
     }
 };
